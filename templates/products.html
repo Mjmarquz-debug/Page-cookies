@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Our products{% endblock %}
+{% block content %}
+<div class="products">
+  {% for p in productosPagina %}
+    <div class="product">
+      <img src="{{ url_for('static', filename=p.imagen) }}" alt="{{ p.nombre }}">
+      <h3>{{ p.nombre }}</h3>
+      <p>${{ "%.2f"|format(p.precio) }}</p>
+      <button 
+        class="product-button add-to-cart" 
+        onclick="addToCart('{{ p.id }}', '{{ p.nombre }}', {{ p.precio }}, '{{ url_for('static', filename=p.imagen) }}')">
+        Add to cart
+      </button>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
+

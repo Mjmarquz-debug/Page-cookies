@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}Sweets Lema{% endblock %}
+{% block content %}
+<h2 style="display: flex; justify-content: center; margin-bottom: 4rem;">8 Sweet Moments box</h2>
+<div class="box contenedorBoxes" data-box="8" data-name="8 Sweet Moments box" data-price="48.00" data-img="{{ url_for('static', filename='img/8BOX.png') }}">
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/1.png') }}" alt="ChocoBites">
+    <h3 style="display: flex; justify-content: center;">ChocoBites</h3>
+    <p style="display: none;">5.50</p> <!-- precio oculto -->
+    <div class="cantidad-box">
+      <button data-id="81" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="81" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/2.png') }}" alt="Galleta Mix">
+    <h3 style="display: flex; justify-content: center;">Galleta Mix</h3>
+    <p style="display: none;">4.75</p> <!-- precio oculto -->
+    <div class="cantidad-box">
+      <button data-id="82" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="82" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/3.png') }}" alt="Sweet Bomb">
+    <h3 style="display: flex; justify-content: center;">Sweet Bomb</h3>
+    <p style="display: none;">6.00</p> <!-- precio oculto -->
+    <div class="cantidad-box">
+      <button data-id="83" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="83" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/4.png') }}" alt="Candy Pop">
+    <h3 style="display: flex; justify-content: center;">Candy Pop</h3>
+    <p style="display: none;">5.25</p> <!-- precio oculto -->
+    <div class="cantidad-box">
+      <button data-id="84" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="84" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/choco.png') }}" alt="Caramelitos">
+    <h3 style="display: flex; justify-content: center;">Caramelitos</h3>
+    <p style="display: none;">4.00</p>
+    <div class="cantidad-box">
+      <button data-id="85" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="85" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/chispa.png') }}" alt="Mini Muffins">
+    <h3 style="display: flex; justify-content: center;">Mini Muffins</h3>
+    <p style="display: none;">3.50</p>
+    <div class="cantidad-box">
+      <button data-id="86" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="86" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/ferrero.png') }}" alt="Sweet Roll">
+    <h3 style="display: flex; justify-content: center;">Sweet Roll</h3>
+    <p style="display: none;">5.00</p>
+    <div class="cantidad-box">
+      <button data-id="87" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="87" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/bolachoco.png') }}" alt="Candy Cookies">
+    <h3 style="display: flex; justify-content: center;">Candy Cookies</h3>
+    <p style="display: none;">4.50</p>
+    <div class="cantidad-box">
+      <button data-id="88" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="88" class="btn-mas">+</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

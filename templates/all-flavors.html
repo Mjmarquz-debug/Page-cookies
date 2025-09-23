@@ -1,0 +1,63 @@
+{%extends 'base.html'%}
+{% block title %}Sweets Lema{% endblock %}
+{% block content %}
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      background-color: #DC3572; /* color de fondo llamativo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 600px;
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 20px;
+      margin: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-weight: 700;
+      color: #FFDC61;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-weight: 700;
+      color: #000;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #FFB8C5;
+      color: #000;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background-color: #FFDC61;
+      color: #000;
+    }
+  </style>
+</head>
+  <div class="container">
+    <h1>All Flavors</h1>
+    <img src="../img/ALL_FLAVORS.png" alt="All Flavors Cookies">
+    <p>A selection of all our flavors, perfect for those who want to try everything and enjoy every bite.</p>
+    <a href="/index.html" class="button">Volver</a>
+  </div>
+{%endblock%}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}Sweets Lema{% endblock %}
+{% block content %}
+<section class="banner">
+  <img src="{{ url_for('static', filename='img/banner1.png') }}" alt="Fondo" />
+  <div class="banner-sub-tit-bnt">
+    <div style="animation: slide-left 0.5s ease forwards;" class="primer-banner-texto">
+    <p>Each cookie, a little piece homemade love</p></div>
+    <button style="animation: slide-top 0.5s ease forwards" class="boton-superpuesto" onclick="window.location.href='{{ url_for('products') }}'">Shop more here</button>
+  </div>
+</section>
+<!-- Productos destacados -->
+<div class="contenedor-productos">
+  <div class="producto" onclick="window.location.href='{{ url_for('crunchy') }}'" style="background-color: #FFB8C5; cursor: pointer;">
+    <img src="{{ url_for('static', filename='img/CRUNCHY.png') }}" alt="Crunchy">
+    <h2>Crunchy</h2>
+  </div>
+  <div class="producto" onclick="window.location.href='{{ url_for('new_york_style') }}'" style="background-color: #A8A3CF; cursor: pointer;">
+    <img src="{{ url_for('static', filename='img/NEWYORK.png') }}" alt="New York Style">
+    <h2>New York Style</h2>
+  </div>
+  <div class="producto" onclick="window.location.href='{{ url_for('products') }}'" style="background-color: #FFDC61; cursor: pointer;">
+    <img src="{{ url_for('static', filename='img/ALL_FLAVORS.png') }}" alt="All Flavors">
+    <h2>All Flavors</h2>
+  </div>
+</div>
+<div class="contenedor-boxes">
+  <div class="boxes" onclick="window.location.href='{{ url_for('cajaDe4Galletas') }}'" style="cursor: pointer;">
+    <img src="{{ url_for('static', filename='img/4BOX.png') }}" alt="caja4Galletas">
+    <div class="box-sub-tit-prc">
+      <h2>4 Sonrisas</h2>
+      <p>A delightful selection designed to sweeten any occasion. Perfect for sharing or enjoying on your own.</p>
+      <a>$24</a>
+    </div>
+  </div>
+  <div class="boxes" onclick="window.location.href='{{ url_for('cajaDe6Galletas') }}'" style="cursor: pointer;">
+    <img src="{{ url_for('static', filename='img/6BOX.png') }}" alt="caja4Galletas">
+    <div class="box-sub-tit-prc">
+      <h2>6 Tentaciones</h2>
+      <p>Bring the family together with a variety of sweets everyone will love.</p>
+      <a>$36</a>
+    </div>
+  </div>
+  <div class="boxes"  onclick="window.location.href='{{ url_for('cajaDe8Galletas') }}'" style="cursor: pointer;">
+    <img src="{{ url_for('static', filename='img/8BOX.png') }}" alt="caja8Galletas">
+    <div class="box-sub-tit-prc">
+      <h2>8 Momentos Dulces</h2>
+      <p>Rich, smooth, and irresistible the ultimate gift for true cookies fans.</p>
+      <a>$48</a>
+    </div>
+  </div>
+</div>
+<img style="width: 100%; height: auto;" src="{{ url_for('static', filename='img/procesodeorden.png') }}" alt="Fondo" class="banner-principal" />
+<section class="banner-principal-envio">
+  <img src="{{ url_for('static', filename='img/delivery_gratis.png') }}" alt="Fondo"/>
+  <div class="banner-tit-bnt">
+    <div class="banner-envio-titulo">Free shipping</div>
+    <div class="banner-envio-subtitulo">Starting at $75</div>
+    <button class="banner-envio-boton-free" onclick="window.location.href='{{ url_for('products') }}'">Shop now</button>
+  </div>
+</section>
+<section class="carrito-banner">
+  <img class="banner-de-carrito" src="{{ url_for('static', filename='img/bannerdecarrito.png') }}" alt="Fondo"/>
+  <div class="texto-al-lado">
+    <p class="carrito-titulo">Choose what you want and order it</p>
+    <p class="carrito-subtitulo">Delivery with a minimum purchase of $28, Monday and Sunday only</p>
+    <a style="text-decoration: none; display: inline-block;">
+      <button class="boton-al-lado" id="boton-carrito-pequeño" onclick="window.location.href='{{ url_for('products') }}'">Shop now</button>
+    </a>
+  </div>
+</section>
+<section class="banner-crunchy">
+  <img src="{{ url_for('static', filename='img/bannercrunchycookies.png') }}" alt="banner-crunchy" />
+    <div class="banner-tit-bnt-2">
+      <p class="banner-crunchy-titulo">Crunchy Cookies</p>
+      <button onclick="window.location.href='{{ url_for('crunchy') }}'" class="boton-crunchy">Shop now</button>
+    <div>
+</section>
+<section>
+  <div class="texto-en-medio">
+      <p class="texto-principal">A new menu every week</p>
+      <p class="texto-secundario">On Instagram I will be showing the process of each of them.</p>
+    <button class="boton-centrado" onclick="window.location.href='https://instagram.com/@sweets_lema'">Follow me on Instagram</button>
+  </div>
+</section>
+<section>
+  <div class="texto-en-medio-2">
+      <p class="texto-principal">Cookies care</p>
+      <p class="texto-secundario">We'll teach you how to care for our cookies, and you'll enjoy the best experience when you try them.</p>
+    <button class="boton-centrado" onclick="window.location.href='{{ url_for('cuidadogalletas') }}'">Learn more</button>
+  </div>
+</section>
+{% endblock %}

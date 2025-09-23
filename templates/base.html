@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{% block title %}Sweets Lema{% endblock %}</title>
+      <script src="https://js.stripe.com/v3/"></script>
+        <script>
+          window.STRIPE_PUBLIC_KEY = "{{ public_key }}";
+          console.log("👉 Clave pública Stripe:", window.STRIPE_PUBLIC_KEY);
+        </script>
+      <link rel="icon" href="{{ url_for('static', filename='img/manoconcorazon.png') }}" type="image/x-icon" />
+
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/franja.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/base_1.css') }}" />
+      {% block head %}<link rel="stylesheet" href="{{ url_for('static', filename='css/productosBoxes.css') }}">{% endblock %}
+  </head>
+  <body>
+      {% include 'franja.html' %}
+      {% include 'menu.html' %}
+      <div class="logofoto-container">
+      <button onclick="location.href='{{ url_for('index') }}'" style="border: none; background: none; padding: 0; cursor: pointer;"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logofoto"></button>
+      </div>
+
+      <main>
+        {% block content %}
+        {% endblock %}
+      </main>
+      <!-- FOOTER -->
+      <footer>
+        <div class="logo-con-texto" style="display: flex; justify-content: center;">
+          <img style="width: 7rem; margin-top: 75px;" src="{{ url_for('static', filename='img/manoconcorazon.png') }}" alt="Logo" />
+        </div>
+        <p class="texto-logo" style="font-size: 24px; font-weight: bold; text-align: center;">Sweets Lema</p>
+
+        <div class="icono-de-redes">
+          <a href="https://www.instagram.com/@sweets_lema" target="_blank" style="color: black; font-size: 2rem;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@sweets_lema" target="_blank" style="color: black; font-size: 1.7rem;">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+
+        <div class="icono-de-redes">
+          <img src="{{ url_for('static', filename='img/visa.png') }}" style="width: 3rem;" alt="Visa">
+          <img src="{{ url_for('static', filename='img/master.png') }}" style="width: 3rem;" alt="Mastercard">
+        </div>
+        <p style="font-size: 14px; font-weight: normal; text-align: center;">© 2025 Sweets Lema<br>All rights reserved</p>
+
+        <ul class="policies" style="display:flex; flex-direction: row; justify-content: center; list-style: none; gap: 20px;">
+          <li><a href="{{ url_for('static', filename='rules/Politica_de_privacidad.pdf') }}" target="_blank">Privacy Policy</a></li>
+          <li><a href="{{ url_for('static', filename='rules/Politica_de_envio.pdf') }}" target="_blank">Shipping Policy</a></li>
+          <li><a href="{{ url_for('static', filename='rules/Politica_de_servicio.pdf') }}" target="_blank">Services Policy</a></li>
+          <li><a href="{{ url_for('static', filename='rules/Terminos_de_servicio.pdf') }}" target="_blank">Terms of Service</a></li>
+        </ul>
+      </footer>
+      <script src="{{ url_for('static', filename='js/prueba.js') }}" defer></script>
+      <script src="{{ url_for('static', filename='js/franja.js') }}" defer></script>
+      <script src="{{ url_for('static', filename='js/menu.js') }}" defer></script>
+      <!-- Panel lateral del carrito -->
+      <!-- Contenedor del carrito -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-panel" class="cart-container">
+      <div class="cart-header">
+        <h3>Your pretty cart</h3>
+        <button id="cerrar-cart" class="cerrar-cart"></button>
+      </div>
+      <ul id="cart-items" class="cart-items">
+        <!-- Los productos se insertan aquí vía JS -->
+      </ul>
+      <div id="empty-cart-msg" class="empty-cart-msg">
+        <p>Cart is empty</p>
+      </div>
+      <div class="cart-footer">
+        <button id="checkout-cart" class="checkout-cart">Checkout</button>
+      </div>
+    </div>
+     <script src="/static/js/stripe.js" defer></script>
+  </body>
+</html>

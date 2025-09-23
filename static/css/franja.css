@@ -1,0 +1,23 @@
+.franja {
+  width: 100%;
+  overflow: hidden;
+  background: #DC3572;
+  border-bottom: 2px solid #ad2255;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+#franja-texto {
+  white-space: nowrap;
+  position: absolute;
+}
+@keyframes slide-left-right {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}

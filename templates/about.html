@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Acerca de Nosotros - Sweets Lema{% endblock %}
+{% block content %}
+<h1 style="text-align: center; font-size: clamp(2rem, 2vw + 2rem, 4rem);">Acerca de Nosotros</h1>
+<div style="flex-direction: row;display: flex;align-items: center;">
+<div>
+<p style="text-align: justify;font-size: clamp(1rem, 1vw + 2rem, 3.5rem);max-width: 100dvw;display: flex; margin: -2rem -4rem 9px 6rem">
+  En Sweets Lema, nos apasiona crear galletas deliciosas y únicas. Cada galleta es hecha a mano con los mejores ingredientes, asegurando que cada bocado sea una experiencia inolvidable.</p>
+</div>
+<div class="mujer">
+  <img src="{{ url_for('static', filename='img/aboutfoto.png') }}" alt="Acerca de Nosotros" style="display: block; margin: 0 auto; max-width: 100dvw; height: auto; width: 993px">
+</div>
+</div>
+{% endblock %}

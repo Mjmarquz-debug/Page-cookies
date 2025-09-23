@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block title%}Sweets Lema{%endblock%}
+{%block content%}
+  <style>
+body {
+    background-color: #FBDB60;
+}
+  </style>
+  <div class="containerNY">
+  <h1>New York Style</h1> 
+  <div class="containerNYProds new_york_style">
+    <!-- Producto 1 -->
+    <div class="productoNY">
+      <h2>Ball Choc</h2>
+      <img src="{{ url_for('static', filename='img/bolachoco.png') }}" alt="Ball Choc">
+      <p>Round and full of energy, these cookies blend the rich taste of cocoa with a soft texture that melts in every bite. A classic reinvented for true chocolate lovers.</p>
+      <p style="background-color: red; border-radius: 10px; width: 80px; margin: 0 auto; text-align: center; color: white; font-weight: bold;">$5</p>
+      <button data-img="{{ url_for('static', filename='img/bolachoco.png') }}" style="background-color: #000; color: #fff; font-size: clamp(0.1rem, 0.5vw + 0.5rem, 2rem); padding: 0.8rem 1rem; border-radius: 2rem; border: none; cursor: pointer; margin-bottom: 80px; margin-top: 30px;" onclick="addToCart('1', 'Ball Choc', 5, this.dataset.img)">Add to cart</button>
+    </div>
+    <!-- Producto 2 -->
+    <div class="productoNY">
+      <h2>Rochet</h2>
+      <img src="{{ url_for('static', filename='img/ferrero.png') }}" alt="Rochet">
+      <p>Inspired by strength and intensity, Rochet combines the perfect crunch with a delicate filling that surprises your taste buds. A burst of flavor in every bite.</p>
+      <p style="background-color: red; border-radius: 10px; width: 80px; margin: 0 auto; text-align: center; color: white; font-weight: bold;">$5.5</p>
+      <button data-img="{{ url_for('static', filename='img/ferrero.png') }}" style="background-color: #000; color: #fff; font-size: clamp(0.1rem, 0.5vw + 0.5rem, 2rem); padding: 0.8rem 1rem; border-radius: 2rem; border: none; cursor: pointer; margin-bottom: 80px; margin-top: 30px;" onclick="addToCart('2', 'Rochet', 5.50, this.dataset.img)" >Add to cart</button>
+    </div>
+    <!-- Producto 3 -->
+    <div class="productoNY">
+      <h2>Choco Pasion</h2>
+      <img src="{{ url_for('static', filename='img/chispa.png') }}" alt="Choco Pasion">
+      <p>With a sweet touch and a silky texture, these cookies capture the true passion for chocolate at its finest. Each bite is a journey straight to pure delight.</p>
+      <p style="background-color: red; border-radius: 10px; width: 80px; margin: 0 auto; text-align: center; color: white; font-weight: bold;">$6</p>
+      <button data-img="{{ url_for('static', filename='img/chispa.png') }}" style="background-color: #000; color: #fff; font-size: clamp(0.1rem, 0.5vw + 0.5rem, 2rem); padding: 0.8rem 1rem; border-radius: 2rem; border: none; cursor: pointer; margin-bottom: 80px; margin-top: 30px;" onclick="addToCart('3', 'Choco Pasion', 6, this.dataset.img)" >Add to cart</button>
+    </div>
+  </div>
+  <!-- Botón volver -->
+  <a href="#" class="buttonNY" onclick='history.back();'>Volver</a>
+</div>
+{%endblock%}

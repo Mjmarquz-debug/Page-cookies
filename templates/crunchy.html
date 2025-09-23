@@ -1,0 +1,67 @@
+
+{% extends 'base.html' %}
+{% block title %}Sweets Lema{% endblock %}
+{% block content %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      background-color: #FFB8C5; /* color suave de fondo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 600px;
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 20px;
+      margin: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-weight: 700;
+      color: #DC3572;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-weight: 700;
+      color: #000;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #DC3572;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background-color: #FFB8C5;
+      color: #000;
+    }
+  </style>
+</head>
+  <div class="container crunchy">
+    <h1>Crunchy</h1>
+    <img style="width: 10rem; border-radius: 0rem" src="{{ url_for('static', filename='img/crunchybolsa.png') }}" alt="Crunchy Cookies" />
+    <p>Delicious crunchy cookies made with the finest ingredients, every bite is a moment of happiness.</p>
+    <p>$10</p>
+    <button data-img="{{ url_for('static', filename='img/crunchybolsa.png') }}" style="background-color: #000; color: #fff; font-size: clamp(0.1rem, 0.5vw + 0.5rem, 2rem); padding: 0.8rem 1rem; border-radius: 2rem; border: none; cursor: pointer;" onclick="addToCart('1', 'Crunchy cookies', 10, this.dataset.img)" class="add-to-cart" >Add to cart</button>
+    <a href="/index.html" class="button">Volver</a>
+  </div>
+{% endblock %}

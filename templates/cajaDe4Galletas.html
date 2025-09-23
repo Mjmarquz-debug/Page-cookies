@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Sweets Lema{% endblock %}
+{% block content %}
+<h2 style="display: flex; justify-content: center; margin-bottom: 4rem;">4 Smiles box</h2>
+<div class="box contenedorBoxes" data-box="4" data-name="4 Smiles box" data-price="24.00" data-img="{{ url_for('static', filename='img/4BOX.png') }}">
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/1.png') }}" alt="ChocoBites">
+    <h3 style="display: flex; justify-content: center;">ChocoBites</h3>
+    <p style="display: none;">5.50</p> <!-- precio oculto -->
+    <div class="cantidad-box">
+      <button data-id="41" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="41" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/2.png') }}" alt="Galleta Mix">
+    <h3 style="display: flex; justify-content: center;">Galleta Mix</h3>
+    <p style="display: none;">4.75</p> <!-- precio oculto -->
+    <div class="cantidad-box">
+      <button data-id="42" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="42" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+    <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/3.png') }}" alt="Sweet Bomb">
+    <h3 style="display: flex; justify-content: center;">Sweet Bomb</h3>
+    <p style="display: none;">6.00</p> <!-- precio oculto -->
+    <div class="cantidad-box">
+      <button data-id="43" class="btn-menos">−</button>
+      <input type="number" value="0" min="0" class="input-cantidad">
+      <button data-id="43" class="btn-mas">+</button>
+    </div>
+  </div>
+  <div class="productoBoxes">
+  <img class="productosBoxes-foto" src="{{ url_for('static', filename='img/4.png') }}" alt="Candy Pop">
+  <h3 style="display: flex; justify-content: center;">Candy Pop</h3>
+  <p style="display: none;">5.25</p> <!-- precio oculto -->
+  <div class="cantidad-box">
+    <button data-id="44" class="btn-menos">−</button>
+    <input type="number" value="0" min="0" class="input-cantidad">
+    <button data-id="44" class="btn-mas">+</button>
+  </div>
+</div>
+{% endblock %}

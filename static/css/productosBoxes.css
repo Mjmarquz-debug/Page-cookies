@@ -1,0 +1,74 @@
+.contenedorBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.productosBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+    justify-content: center;
+}
+.productoBoxes img {
+  width: 15rem;       
+  height: 15rem;         
+  object-fit: cover;     
+  border-radius: 1rem; 
+}
+
+.productosBoxes-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  
+}
+.productosBoxes-button:hover {
+  background: crimson;
+}
+.productosBoxes-foto {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 20rem;
+    border-radius: 2rem;
+}
+.productosBoxes-foto:hover {
+  transform: scale(1.05);
+}
+.cantidad-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.cantidad-box button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cantidad-box button:hover {
+  background-color: #444;
+}
+
+.cantidad-box .input-cantidad {
+  width: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,68 @@
+/* separa el menú del contenido */
+.products-main {
+  margin-top: 80px;
+  padding: 20px;
+}
+/* contenedor de productos en 3 filas y varias columnas */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+/* cada producto */
+.product {
+  width: 220px;
+  height: 350px; /* 🔹 Alto estándar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* reparte el contenido */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.product:hover {
+  transform: scale(1.05);
+}
+/* imagen del producto con tamaño fijo */
+.product img {
+  width: 100%;
+  height: 150px; /* 🔹 Altura fija */
+  object-fit: cover; /* recorta la imagen manteniendo proporción */
+  border-radius: 8px;
+}
+/* nombre */
+.product h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+/* precio */
+.product p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+}
+/* botón */
+.product-button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.product-button:hover {
+  background: #444;
+}
