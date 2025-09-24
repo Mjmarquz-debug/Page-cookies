@@ -27,4 +27,4 @@ Clona este repositorio:
 
 ```bash
 git clone https://github.com/TU_USUARIO/mi-pagina-flask.git
-cd mi-pagina-flask
+cd Page-cookies
